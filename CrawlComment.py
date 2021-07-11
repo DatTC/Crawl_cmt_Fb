@@ -23,20 +23,14 @@ sleep(3)
 
 cmt_list = browser.find_elements_by_xpath("//div[@aria-label='Bình luận']")
 
-# display acc and content of comment
-for i in range(3):
+# display acc and content of 20 comment
+for i in range(20):
 # for i in range(len(cmt_list)):
     # if(cmt_list[i].find_element_by_class_name("_2txe")):
     #     continue
     user_cmt = cmt_list[i].find_element_by_class_name("_6qw4")
     content_cmt = cmt_list[i].find_element_by_class_name("_3l3x")
     print("* ", user_cmt.text,": ", content_cmt.text)
-    print("type1: ",type(user_cmt))
-    print("type2: ",type(content_cmt))
-    print('y') if isinstance(user_cmt, WebElement) else print('n')
 
 sleep(3)
 browser.close()
-
-
-# <class 'selenium.webdriver.remote.webelement.WebElement'>
